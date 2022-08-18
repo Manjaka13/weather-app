@@ -9,7 +9,9 @@ import Loading from "./Loading";
 */
 
 const WeatherData = () => {
-	const { loading } = useWeather();
+	const { loading, weather } = useWeather();
+
+	console.log(weather)
 
 	return (
 		<div className="weather-data">
@@ -30,17 +32,17 @@ const WeatherData = () => {
 						<div className="list">
 							<div className="data" title="Wind speed">
 								<Icon className="icon" icon={["fas", "wind"]} />
-								<p className="value">1.84 m/sec</p>
+								<p className="value">{weather?.wind?.speed} m/sec</p>
 								<p className="caption">Speed</p>
 							</div>
 							<div className="data" title="Gust">
 								<Icon className="icon" icon={["fas", "gauge-high"]} />
-								<p className="value">1.96 m/sec</p>
+								<p className="value">{weather?.wind?.gust} m/sec</p>
 								<p className="caption">Gust</p>
 							</div>
 							<div className="data" title="Wind direction">
 								<Icon className="icon" icon={["fas", "compass"]} />
-								<p className="value">138 °</p>
+								<p className="value">{weather?.wind?.deg} °</p>
 								<p className="caption">Direction</p>
 							</div>
 						</div>
@@ -52,17 +54,17 @@ const WeatherData = () => {
 						<div className="list">
 							<div className="data" title="Atmospheric pressure">
 								<Icon className="icon" icon={["fas", "gauge-simple-high"]} />
-								<p className="value">1024 hPA</p>
+								<p className="value">{weather?.main?.pressure} hPA</p>
 								<p className="caption">Pressure</p>
 							</div>
 							<div className="data" title="Humidity">
 								<Icon className="icon" icon={["fas", "droplet"]} />
-								<p className="value">18 %</p>
+								<p className="value">{weather?.main?.humidity} %</p>
 								<p className="caption">Humidity</p>
 							</div>
 							<div className="data" title="Visibility">
 								<Icon className="icon" icon={["fas", "eye"]} />
-								<p className="value">8 km</p>
+								<p className="value">{Math.floor(weather?.visibility / 1000)} km</p>
 								<p className="caption">Visibility</p>
 							</div>
 						</div>

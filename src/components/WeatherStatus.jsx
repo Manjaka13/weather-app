@@ -27,7 +27,6 @@ const WeatherStatus = () => {
     const today = new Date(Date.now());
     let now = today.toString().split(" ");
     now = `${dayOfWeek[today.getDay()]}, ${now[2]} ${now[1]} ${now[3]}`;
-    // console.log(weather)
 
     return (
         <div className="weather-status">
