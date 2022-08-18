@@ -12,7 +12,15 @@ import {
 	faCloudSun,
 	faClock,
 	faSunPlantWilt,
-	faMoon
+	faMoon,
+	faSearch,
+	faMapMarkerAlt,
+	faWind,
+	faCompass,
+	faGaugeHigh,
+	faGaugeSimpleHigh,
+	faDroplet,
+	faEye
 } from "@fortawesome/free-solid-svg-icons";
 
 /*
@@ -31,5 +39,13 @@ library.add(
 	faCloudSun,
 	faClock,
 	faSunPlantWilt,
-	faMoon
+	faMoon,
+	faSearch,
+	faMapMarkerAlt,
+	faWind,
+	faCompass,
+	faGaugeHigh,
+	faGaugeSimpleHigh,
+	faDroplet,
+	faEye
 );

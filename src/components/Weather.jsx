@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import WeatherData from "./WeatherData";
 import WeatherStatus from "./WeatherStatus";
 
 /*
@@ -9,8 +10,7 @@ const Weather = () => (
 	<Fragment>
 		<div className="weather">
 			<WeatherStatus />
-			<div className="weather__data">
-			</div>
+			<WeatherData />
 		</div>
 	</Fragment>
 );
