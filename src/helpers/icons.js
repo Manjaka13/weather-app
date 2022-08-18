@@ -7,7 +7,12 @@ import {
 	faFacebook
 } from "@fortawesome/free-brands-svg-icons";
 import {
-	faEnvelope
+	faEnvelope,
+	faCalendarAlt,
+	faCloudSun,
+	faClock,
+	faSunPlantWilt,
+	faMoon
 } from "@fortawesome/free-solid-svg-icons";
 
 /*
@@ -22,4 +27,9 @@ library.add(
 	faLinkedin,
 	faFacebook,
 	faEnvelope,
+	faCalendarAlt,
+	faCloudSun,
+	faClock,
+	faSunPlantWilt,
+	faMoon
 );
