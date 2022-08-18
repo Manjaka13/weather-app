@@ -1,15 +1,20 @@
 import React from "react";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import Social from "./Social";
+import { useWeather } from "../hooks/useWeather";
+import Loading from "./Loading";
 
 /*
-    Displays weather data
+	Displays weather data
 */
 
 const WeatherData = () => {
+	const { loading } = useWeather();
+
 	return (
 		<div className="weather-data">
-			<div className="weather-data__box">
+			{loading && <Loading />}
+			{!loading && <div className="weather-data__box">
 				<form className="weather-data__location">
 					<input className="input" type="text" placeholder="Your current location" />
 					<button className="search" type="submit">
@@ -66,7 +71,7 @@ const WeatherData = () => {
 
 				<div className="weather-data__separator"></div>
 				<Social />
-			</div>
+			</div>}
 		</div>
 	);
 };

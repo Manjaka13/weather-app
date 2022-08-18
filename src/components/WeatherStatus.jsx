@@ -1,29 +1,36 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+import { useWeather } from "../hooks/useWeather";
 
 /*
     Displays weather status
 */
 
 const WeatherStatus = () => {
+    const { loading } = useWeather();
+
     return (
         <div className="weather-status">
             <div className="weather-status__gradient">
                 <div className="weather-status__top">
-                    <div className="weather-status__sunrise">
-                        <Icon className="icon" icon={["fas", "sun-plant-wilt"]} />
-                        <div>
-                            <p className="caption">Sunrise</p>
-                            <p className="label"><Icon icon={["fas", "clock"]} /> 5h32</p>
-                        </div>
-                    </div>
-                    <div className="weather-status__sunset">
-                        <Icon className="icon" icon={["fas", "moon"]} />
-                        <div>
-                            <p className="caption">Sunset</p>
-                            <p className="label"><Icon icon={["fas", "clock"]} /> 18h44</p>
-                        </div>
-                    </div>
+                    {!loading && (
+                        <Fragment>
+                            <div className="weather-status__sunrise">
+                                <Icon className="icon" icon={["fas", "sun-plant-wilt"]} />
+                                <div>
+                                    <p className="caption">Sunrise</p>
+                                    <p className="label"><Icon icon={["fas", "clock"]} /> 5h32</p>
+                                </div>
+                            </div>
+                            <div className="weather-status__sunset">
+                                <Icon className="icon" icon={["fas", "moon"]} />
+                                <div>
+                                    <p className="caption">Sunset</p>
+                                    <p className="label"><Icon icon={["fas", "clock"]} /> 18h44</p>
+                                </div>
+                            </div>
+                        </Fragment>
+                    )}
                 </div>
                 <div className="weather-status__bottom">
                     <div className="weather-status__group">

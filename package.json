@@ -36,5 +36,6 @@
 		"eslint-plugin-react": "^7.29.4",
 		"prettier": "^2.6.1",
 		"sass": "^1.49.9"
-	}
+	},
+	"proxy": "https://api.openweathermap.org"
 }

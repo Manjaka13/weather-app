@@ -1,18 +1,15 @@
-import React, { Fragment } from "react";
-import WeatherData from "./WeatherData";
-import WeatherStatus from "./WeatherStatus";
+import React from "react";
+import { WeatherProvider } from "../hooks/useWeather";
+import WeatherWrapper from "./WeatherWrapper";
 
 /*
 	Home page
 */
 
 const Weather = () => (
-	<Fragment>
-		<div className="weather">
-			<WeatherStatus />
-			<WeatherData />
-		</div>
-	</Fragment>
+	<WeatherProvider>
+		<WeatherWrapper />
+	</WeatherProvider>
 );
 
 export default Weather;
