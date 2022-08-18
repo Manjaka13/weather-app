@@ -1,0 +1,15 @@
+{
+	"short_name": "portfoliov3",
+	"name": "Portfolio v3",
+	"icons": [
+		{
+			"src": "/assets/icon.png",
+			"sizes": "100x100",
+			"type": "image/png"
+		}
+	],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#282828",
+	"background_color": "#F5F5F5"
+}

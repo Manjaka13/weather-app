@@ -1,0 +1,59 @@
+/*
+	Define global style variables
+*/
+
+$ui-step: 5;
+$ui-sides: (
+	"top",
+	"bottom",
+	"left",
+	"right"
+);
+$font-size: 1rem;
+$font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-color-title: rgb(50, 50, 50);
+$font-color-hard: black;
+$font-color-normal: rgb(80, 80, 80);
+$font-color-light: rgb(160, 160, 160);
+$paragraph-preprocessor: "pg";
+$padding-preprocessor: "pd";
+$margin-preprocessor: "mg";
+$fontsize-preprocessor: "fs";
+$border-radius-preprocessor: "br";
+$transition-preprocessor: "tr";
+$flex-preprocessor: "f";
+$width-preprocessor: "w";
+$height-preprocessor: "h";
+$background-preprocessor: "bg";
+$text-preprocessor: "tx";
+$screen-sizes: (
+	"xlg",
+	"lg",
+	"slg",
+	"md",
+	"sm",
+	"xsm"
+);
+$screen-xlg: 1400px;
+$screen-lg: 1200px;
+$screen-slg: 1000px;
+$screen-md: 800px;
+$screen-sm: 600px;
+$screen-xsm: 400px;
+$color-bg: rgb(245, 245, 245);
+$color-theme: gold;
+$color-theme2: rgb(40, 40, 40);
+$colors: (
+	red,
+	green,
+	lime,
+	purple,
+	orange,
+	gold,
+	yellow,
+	pink,
+	blue,
+	black,
+	white,
+	whitesmoke
+);
