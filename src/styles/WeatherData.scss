@@ -6,8 +6,21 @@
 	position: relative;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 
+	@include screen-x(900px) {
+		width: 100%;
+		height: auto;
+		flex-grow: 1;
+		overflow: auto;
+	}
+
 	&__box {
-		padding: 40px 30px;
+		padding: 30px;
+		@include screen-x(1200px) {
+			padding: 30px 10px;
+		}
+		@include screen-x(900px) {
+			padding: 10px;
+		}
 	}
 
 	&__location {
@@ -54,15 +67,36 @@
 		}
 	}
 
+	&__group {
+		@include screen-x(900px) {
+			@include flex-row(space-between, center);
+		}
+		@include screen-x(700px) {
+			@include flex-col(initial, initial);
+		}
+	}
+
 	&__data {
 		margin-top: 10px;
 		padding: 10px;
+		@include screen-x(900px) {
+			width: 45%;
+		}
+		@include screen-x(700px) {
+			width: calc(100% - 20px);
+		}
 		.list {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			grid-auto-rows: auto;
 			grid-gap: 20px;
 			margin-top: 10px;
+			@include screen-x(1200px) {
+				grid-gap: 10px;
+			}
+			@include screen-x(900px) {
+				grid-gap: 20px;
+			}
 		}
 		.title {
 			color: white;

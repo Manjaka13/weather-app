@@ -1,9 +1,14 @@
 .weather-status {
 	flex: 1;
 	height: 100%;
-	background: url(../../public/assets/bg-morning-sunny.jpg) center center
+	background: url(../../public/assets/bg-morning-sunny.jpg) center bottom
 		no-repeat;
 	background-size: cover;
+
+	@include screen-x(900px) {
+		height: 250px;
+		flex: none;
+	}
 
 	&__gradient {
 		@include flex-col(start, space-between);
@@ -15,6 +20,9 @@
 	&__top {
 		@include flex-row(initial, center);
 		padding: 20px;
+		@include screen-x(900px) {
+			padding: 10px;
+		}
 	}
 
 	&__sunrise,
@@ -27,6 +35,15 @@
 		text-shadow: 0px 1px 2px black;
 		padding: 20px;
 		border-radius: 10px;
+		@include screen-x(900px) {
+			padding: 10px;
+		}
+		@include screen-x(600px) {
+			margin-right: 20px;
+		}
+		@include screen-x(500px) {
+			margin-right: 10px;
+		}
 		& > div {
 			pointer-events: none;
 		}
@@ -36,6 +53,9 @@
 		.icon {
 			font-size: 3.4em;
 			margin-right: 10px;
+			@include screen-x(500px) {
+				font-size: 2em;
+			}
 		}
 		.caption {
 			font-weight: bold;
@@ -43,9 +63,22 @@
 		}
 	}
 
+	&__group {
+		@include flex-row(initial, center);
+	}
+
 	&__bottom {
 		@include flex-row(initial, center);
 		padding: 40px;
+		@include screen-x(900px) {
+			@include flex-row(space-between, center);
+			padding: 10px;
+			width: calc(100% - 20px);
+		}
+		@include screen-x(400px) {
+			flex-direction: column-reverse;
+			align-items: start;
+		}
 	}
 
 	&__temperature {
@@ -53,6 +86,12 @@
 		font-size: 7em;
 		color: white;
 		text-shadow: 0px 1px 3px black;
+		@include screen-x(900px) {
+			font-size: 5em;
+		}
+		@include screen-x(500px) {
+			font-size: 3em;
+		}
 	}
 
 	&__info {
@@ -62,18 +101,36 @@
 	&__location {
 		color: white;
 		font-size: 3em;
+		@include screen-x(900px) {
+			font-size: 2em;
+		}
+		@include screen-x(500px) {
+			font-size: 1.4em;
+		}
 	}
 
 	&__date {
 		color: white;
+		@include screen-x(500px) {
+			font-size: 0.8em;
+		}
 	}
 
 	&__status {
 		padding-left: 50px;
 		text-align: center;
 		color: white;
+		@include screen-x(900px) {
+			padding: 0;
+		}
 		.icon {
 			font-size: 4em;
+			@include screen-x(900px) {
+				font-size: 3em;
+			}
+			@include screen-x(500px) {
+				font-size: 2em;
+			}
 		}
 		.label {
 			padding-top: 10px;

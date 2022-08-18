@@ -26,10 +26,12 @@ const WeatherStatus = () => {
                     </div>
                 </div>
                 <div className="weather-status__bottom">
-                    <p className="weather-status__temperature">22°</p>
-                    <div className="weather-status__info">
-                        <p className="weather-status__location">Antsirabe</p>
-                        <p className="weather-status__date"><Icon icon={["fas", "calendar-alt"]} /> Thursday 18 Aug. 2022</p>
+                    <div className="weather-status__group">
+                        <p className="weather-status__temperature">22°</p>
+                        <div className="weather-status__info">
+                            <p className="weather-status__location">Antsirabe</p>
+                            <p className="weather-status__date"><Icon icon={["fas", "calendar-alt"]} /> Thursday 18 Aug. 2022</p>
+                        </div>
                     </div>
                     <div className="weather-status__status">
                         <Icon className="icon" icon={["fas", "cloud-sun"]} />
