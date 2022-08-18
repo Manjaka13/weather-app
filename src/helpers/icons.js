@@ -20,7 +20,7 @@ import {
 	faGaugeHigh,
 	faGaugeSimpleHigh,
 	faDroplet,
-	faEye
+	faEye,
 } from "@fortawesome/free-solid-svg-icons";
 
 /*
@@ -47,5 +47,5 @@ library.add(
 	faGaugeHigh,
 	faGaugeSimpleHigh,
 	faDroplet,
-	faEye
+	faEye,
 );

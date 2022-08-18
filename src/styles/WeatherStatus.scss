@@ -120,6 +120,7 @@
 		padding-left: 50px;
 		text-align: center;
 		color: white;
+		position: relative;
 		@include screen-x(900px) {
 			padding: 0;
 		}
@@ -134,6 +135,10 @@
 		}
 		.label {
 			padding-top: 10px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
 		}
 	}
 }

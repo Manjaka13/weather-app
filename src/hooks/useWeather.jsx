@@ -19,9 +19,10 @@ const WeatherProvider = ({ children }) => {
     const updateCity = (str) => setCity(str);
 
     useEffect(() => {
-        // getWeather(coordinates[0], coordinates[1])
-        //     .then(setWeather)
-        //     .catch(console.error);
+        getWeather(coordinates[0], coordinates[1])
+            .then(setWeather)
+            .then(() => setLoading(false))
+            .catch(console.error);
     }, []);
 
     return (
