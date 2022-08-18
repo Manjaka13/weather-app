@@ -102,4 +102,11 @@
 			pointer-events: none;
 		}
 	}
+
+	&__separator {
+		width: 100%;
+		height: 3px;
+		background: white;
+		margin-top: 20px;
+	}
 }

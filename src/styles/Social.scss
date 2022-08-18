@@ -1,0 +1,19 @@
+.social {
+	@include flex-row(center, center);
+	list-style-type: none;
+	padding: 20px 0;
+	margin: 0;
+
+	&__item {
+		margin-left: 10px;
+		margin-right: 10px;
+		font-size: 2.4em;
+		.link {
+			@include transition;
+			color: rgb(170, 170, 170);
+			&:hover {
+				color: white;
+			}
+		}
+	}
+}

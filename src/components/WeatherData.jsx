@@ -1,5 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+import Social from "./Social";
 
 /*
     Displays weather data
@@ -60,6 +61,9 @@ const WeatherData = () => {
 						</div>
 					</div>
 				</div>
+
+				<div className="weather-data__separator"></div>
+				<Social />
 			</div>
 		</div>
 	);
