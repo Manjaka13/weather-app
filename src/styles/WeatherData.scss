@@ -67,6 +67,31 @@
 		}
 	}
 
+	&__suggestion {
+		list-style-type: none;
+		padding: 0;
+		position: absolute;
+		top: 100%;
+		margin: auto;
+		width: calc(100% - 20px);
+		z-index: 2;
+		overflow: hidden;
+		height: 300px;
+		overflow: auto;
+		&-item {
+			@include transition;
+			padding: 10px;
+			background: white;
+			color: rgb(60, 60, 60);
+			border-bottom: 1px rgb(140, 140, 140) solid;
+			cursor: pointer;
+			&:hover {
+				color: black;
+				background: rgb(245, 245, 245);
+			}
+		}
+	}
+
 	&__group {
 		@include screen-x(900px) {
 			@include flex-row(space-between, center);

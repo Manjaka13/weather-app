@@ -21,6 +21,8 @@ import {
 	faGaugeSimpleHigh,
 	faDroplet,
 	faEye,
+	faCity,
+	faWarning
 } from "@fortawesome/free-solid-svg-icons";
 
 /*
@@ -48,4 +50,6 @@ library.add(
 	faGaugeSimpleHigh,
 	faDroplet,
 	faEye,
+	faCity,
+	faWarning
 );

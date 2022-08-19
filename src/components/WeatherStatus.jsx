@@ -59,11 +59,11 @@ const WeatherStatus = () => {
                             <p className="weather-status__date"><Icon icon={["fas", "calendar-alt"]} /> {now}</p>
                         </div>
                     </div>
-                    <div className="weather-status__status">
+                    {!loading && <div className="weather-status__status">
                         {/* <Icon className="icon" icon={["fas", "cloud-sun"]} /> */}
                         <img src={`http://openweathermap.org/img/wn/${weather?.weather[0].icon}@2x.png`} alt="Weather status" />
                         <p className="label">{status}</p>
-                    </div>
+                    </div>}
                 </div>
             </div>
         </div>
