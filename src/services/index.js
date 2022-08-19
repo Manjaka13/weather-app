@@ -5,7 +5,7 @@ import http from "./http";
 */
 
 const baseUrl = "https://api.openweathermap.org"
-const apikey = "e8ef23bd6458a4bddfa8a8da22f8bb16";
+const apikey = process.env.REACT_APP_APIKEY;
 
 // Get current weather
 export const getWeather = (lat, lon) => http.get(`${baseUrl}/data/2.5/weather?units=metric&lat=${lat}&lon=${lon}&appid=${apikey}`);
