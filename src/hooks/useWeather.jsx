@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext, createContext } from "react";
-import { getWeather, getCities, getLatLong } from "../services/index";
+import { getWeather, getLatLong } from "../services/index";
+import cities from "../helpers/cities";
 
 /*
     Weather hook and context
@@ -18,14 +19,11 @@ const WeatherProvider = ({ children }) => {
     const [weather, setWeather] = useState(null);
     const [city, setCity] = useState(defaultCity.name);
     const [loading, setLoading] = useState(true);
-    const [cities, setCities] = useState([]);
 
     const updateCity = (str) => setCity(str);
 
     useEffect(() => {
-        getCities()
-            .then(setCities)
-            .then(() => getWeather(defaultCity.coordinates[0], defaultCity.coordinates[1]))
+        getWeather(defaultCity.coordinates[0], defaultCity.coordinates[1])
             .then(setWeather)
             .then(() => setLoading(false))
             .catch(console.error);

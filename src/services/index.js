@@ -15,4 +15,4 @@ export const getLatLong = (city) => http.get(`${baseUrl}/geo/1.0/direct?q=${city
 
 // Get city name from coordinates
 export const getCity = (lat, lon) => http.get(`${baseUrl}/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${apikey}`);
-export const getCities = () => http.get(`http://localhost:3000/cities.json`);
+// export const getCities = () => http.get(`http://localhost:3000/cities.json`);
