@@ -106,11 +106,13 @@ const WeatherData = () => {
 									<p className="value">{weather?.wind?.speed} m/sec</p>
 									<p className="caption">Speed</p>
 								</div>
-								<div className="data" title="Gust">
-									<Icon className="icon" icon={["fas", "gauge-high"]} />
-									<p className="value">{weather?.wind?.gust} m/sec</p>
-									<p className="caption">Gust</p>
-								</div>
+								{weather?.wind?.gust && (
+									<div className="data" title="Gust">
+										<Icon className="icon" icon={["fas", "gauge-high"]} />
+										<p className="value">{weather?.wind?.gust} m/sec</p>
+										<p className="caption">Gust</p>
+									</div>
+								)}
 								<div className="data" title="Wind direction">
 									<Icon className="icon" icon={["fas", "compass"]} />
 									<p className="value">{weather?.wind?.deg} °</p>
