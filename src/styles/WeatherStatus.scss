@@ -5,6 +5,21 @@
 		no-repeat;
 	background-size: cover;
 
+	&--cloudy {
+		background: url(../../public/assets/bg-clouds.jpg) center bottom no-repeat;
+		background-size: cover;
+	}
+
+	&--clear {
+		background: url(../../public/assets/bg-clear.jpg) center bottom no-repeat;
+		background-size: cover;
+	}
+
+	&--rain {
+		background: url(../../public/assets/bg-rain.jpg) center bottom no-repeat;
+		background-size: cover;
+	}
+
 	@include screen-x(900px) {
 		height: 250px;
 		flex: none;

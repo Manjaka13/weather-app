@@ -23,13 +23,14 @@ const WeatherStatus = () => {
     if (sunset) sunset = convertTime(sunset);
 
     const status = weather?.weather[0].main || "Sunny";
+    const bg = (status === "Thunderstorm" || status === "Drizzle" || status === "Rain" || status === "Snow") ? "rain" : status === "Clear" ? "clear" : "cloudy";
     const dayOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const today = new Date(Date.now());
     let now = today.toString().split(" ");
     now = `${dayOfWeek[today.getDay()]}, ${now[2]} ${now[1]} ${now[3]}`;
 
     return (
-        <div className="weather-status">
+        <div className={`weather-status weather-status--${bg}`}>
             <div className="weather-status__gradient">
                 <div className="weather-status__top">
                     {!loading && (
