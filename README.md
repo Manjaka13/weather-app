@@ -29,6 +29,5 @@ npm run build
 
 The builded project is optimized for best performance and ready to be deployed.
 
-</br></br>
 
 Made with 💘 by [Hari](https://linkedin.com/in/harijaona-rajaonson)
